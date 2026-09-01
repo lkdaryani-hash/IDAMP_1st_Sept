@@ -1,0 +1,264 @@
+{
+  "run_id": "89e76b6e-65f1-46a3-a5c6-de212629fd87",
+  "tables": {
+    "sales_data": {
+      "row_count": 186,
+      "columns": {
+        "transaction_id": {
+          "dtype": "str",
+          "null_count": 8,
+          "null_pct": 4.3,
+          "unique_count": 166,
+          "sample_values": [
+            "TXN10046",
+            "TXN10078",
+            "RET10009",
+            "RET10004",
+            "TXN10077"
+          ],
+          "quality_flags": []
+        },
+        "transaction_date": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 116,
+          "sample_values": [
+            "01/15/2024",
+            "2024-01-17",
+            "2024-03-03",
+            "2024-02-20",
+            "2024-01-05"
+          ],
+          "quality_flags": []
+        },
+        "store_id": {
+          "dtype": "str",
+          "null_count": 5,
+          "null_pct": 2.69,
+          "unique_count": 10,
+          "sample_values": [
+            "S09",
+            "S10",
+            "S07",
+            "S06",
+            "S08"
+          ],
+          "quality_flags": []
+        },
+        "product_id": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "P001",
+            "P014",
+            "P012",
+            "P016",
+            "P003"
+          ],
+          "quality_flags": []
+        },
+        "product_name": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "iPhone 15",
+            "TRX Resistance Bands",
+            "Nespresso Machine",
+            "CamelBak Water Bottle",
+            "AirPods Pro"
+          ],
+          "quality_flags": []
+        },
+        "category": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 21,
+          "sample_values": [
+            "Electronics",
+            "Sport",
+            "Home & Kitchen",
+            "Sports",
+            "Beauty"
+          ],
+          "quality_flags": []
+        },
+        "quantity": {
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 11,
+          "sample_values": [
+            "7",
+            "-1",
+            "-2",
+            "3",
+            "5"
+          ],
+          "min": -4.0,
+          "max": 8.0,
+          "mean": 3.9409,
+          "quality_flags": []
+        },
+        "unit_price": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 172,
+          "sample_values": [
+            "1034.37",
+            "55.79",
+            "192.03",
+            "193.82",
+            "30.63"
+          ],
+          "min": 0.01,
+          "max": 9999.99,
+          "mean": 356.2701,
+          "quality_flags": []
+        },
+        "total_amount": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 172,
+          "sample_values": [
+            "7240.59",
+            "390.53",
+            "-192.03",
+            "-387.64",
+            "91.89"
+          ],
+          "min": -1230.56,
+          "max": 9999.99,
+          "mean": 1215.2431,
+          "quality_flags": []
+        },
+        "customer_segment": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 16,
+          "sample_values": [
+            "Loyal",
+            "Premium",
+            "Prem",
+            "Bgt",
+            "Standard"
+          ],
+          "quality_flags": []
+        },
+        "payment_method": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 4,
+          "sample_values": [
+            "Apple Pay",
+            "PayPal",
+            "Debit Card",
+            "Credit Card"
+          ],
+          "quality_flags": []
+        }
+      }
+    },
+    "products": {
+      "row_count": 20,
+      "columns": {
+        "product_id": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "P001",
+            "P002",
+            "P003",
+            "P004",
+            "P005"
+          ],
+          "quality_flags": []
+        },
+        "product_name": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "iPhone 15",
+            "Samsung Galaxy S24",
+            "AirPods Pro",
+            "Sony WH-1000XM5",
+            "Levi's 501 Jeans"
+          ],
+          "quality_flags": []
+        },
+        "category": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 5,
+          "sample_values": [
+            "Electronics",
+            "Apparel",
+            "Home & Kitchen",
+            "Sports",
+            "Beauty"
+          ],
+          "quality_flags": []
+        },
+        "standard_price": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 19,
+          "sample_values": [
+            "999.99",
+            "849.99",
+            "249.99",
+            "349.99",
+            "69.99"
+          ],
+          "min": 12.99,
+          "max": 999.99,
+          "mean": 259.2405,
+          "quality_flags": []
+        }
+      }
+    }
+  },
+  "candidate_join_keys": {
+    "product_id": [
+      "sales_data",
+      "products"
+    ]
+  },
+  "llm_analysis": {
+    "quality_summary": "The sales_data table has 186 rows with generally good completeness (no nulls in most columns) but exhibits several data quality problems: mixed date formats in transaction_date, occasional nulls in transaction_id (4.3%) and store_id (2.69%), negative values in quantity and total_amount indicating returns or data entry errors, and inconsistent categorical values in customer_segment (e.g., 'Prem', 'Bgt'). The products table is clean with no nulls and consistent data types.",
+    "critical_issues": [
+      "Null values in transaction_id (4.3%) and store_id (2.69%).",
+      "Mixed date formats in transaction_date (MM/DD/YYYY and YYYY-MM-DD).",
+      "Negative quantity and total_amount values that may represent returns but are not clearly distinguished.",
+      "Inconsistent customer_segment labels (e.g., 'Prem', 'Bgt') leading to fragmented segmentation.",
+      "Potential mismatch between product_name in sales_data and products (different naming conventions)."
+    ],
+    "transformation_recommendations": {
+      "sales_data.transaction_id": "Generate surrogate IDs for missing values or flag rows for manual review.",
+      "sales_data.store_id": "Impute missing store_id using nearest non\u2011null store for the same transaction_date or flag for review.",
+      "sales_data.transaction_date": "Standardize to ISO format (YYYY\u2011MM\u2011DD) using a date parsing routine that handles both MM/DD/YYYY and YYYY\u2011MM\u2011DD.",
+      "sales_data.quantity": "Create a separate boolean column is_return = quantity < 0; then convert negative quantities to absolute values for analytical consistency.",
+      "sales_data.total_amount": "Apply the same return flag logic as quantity; ensure total_amount sign matches the return flag.",
+      "sales_data.customer_segment": "Map inconsistent labels to a canonical set (e.g., 'Prem' \u2192 'Premium', 'Bgt' \u2192 'Budget') using a lookup table.",
+      "sales_data.payment_method": "Standardize spelling/casing (e.g., 'Credit Card' vs 'credit card') and create a controlled vocabulary.",
+      "sales_data.product_name": "Trim whitespace and align naming with products.product_name via fuzzy matching or lookup table.",
+      "products.standard_price": "Validate that standard_price aligns with average unit_price in sales_data for each product; flag large deviations."
+    },
+    "join_key_reasoning": "product_id is the only column present in both sales_data and products with matching data types (string) and no nulls, making it a reliable natural key for joining. It uniquely identifies each product, allowing enrichment of sales records with product attributes such as category and standard_price."
+  }
+}

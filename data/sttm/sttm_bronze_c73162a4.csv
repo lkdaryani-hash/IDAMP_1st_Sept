@@ -1,0 +1,27 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+public,sales_data,transaction_id,public,sales_data,transaction_id,type_cast,CAST(transaction_id AS STRING)
+public,sales_data,transaction_date,public,sales_data,transaction_date,type_cast,CAST(transaction_date AS STRING)
+public,sales_data,store_id,public,sales_data,store_id,type_cast,CAST(store_id AS STRING)
+public,sales_data,product_id,public,sales_data,product_id,type_cast,CAST(product_id AS STRING)
+public,sales_data,product_name,public,sales_data,product_name,type_cast,CAST(product_name AS STRING)
+public,sales_data,category,public,sales_data,category,type_cast,CAST(category AS STRING)
+public,sales_data,quantity,public,sales_data,quantity,type_cast,CAST(quantity AS INTEGER)
+public,sales_data,unit_price,public,sales_data,unit_price,type_cast,CAST(unit_price AS FLOAT)
+public,sales_data,total_amount,public,sales_data,total_amount,type_cast,CAST(total_amount AS FLOAT)
+public,sales_data,customer_segment,public,sales_data,customer_segment,type_cast,CAST(customer_segment AS STRING)
+public,sales_data,payment_method,public,sales_data,payment_method,type_cast,CAST(payment_method AS STRING)
+public,products,product_id,public,products,product_id,type_cast,CAST(product_id AS STRING)
+public,products,product_name,public,products,product_name,type_cast,CAST(product_name AS STRING)
+public,products,category,public,products,category,type_cast,CAST(category AS STRING)
+public,products,standard_price,public,products,standard_price,type_cast,CAST(standard_price AS FLOAT)
+public,stores,store_id,public,stores,store_id,type_cast,CAST(store_id AS STRING)
+public,stores,store_name,public,stores,store_name,type_cast,CAST(store_name AS STRING)
+public,stores,region,public,stores,region,type_cast,CAST(region AS STRING)
+public,stores,city,public,stores,city,type_cast,CAST(city AS STRING)
+public,stores,state,public,stores,state,type_cast,CAST(state AS STRING)
+public,sales_data,_load_timestamp,public,sales_data,_load_timestamp,metadata_inject,_load_timestamp = utc_now()
+public,sales_data,_source_file,public,sales_data,_source_file,metadata_inject,_source_file = source_path
+public,products,_load_timestamp,public,products,_load_timestamp,metadata_inject,_load_timestamp = utc_now()
+public,products,_source_file,public,products,_source_file,metadata_inject,_source_file = source_path
+public,stores,_load_timestamp,public,stores,_load_timestamp,metadata_inject,_load_timestamp = utc_now()
+public,stores,_source_file,public,stores,_source_file,metadata_inject,_source_file = source_path

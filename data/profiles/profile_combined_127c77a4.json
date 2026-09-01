@@ -1,0 +1,339 @@
+{
+  "run_id": "127c77a4-6c1b-416d-8b7c-53d70b2211f6",
+  "tables": {
+    "sales_data": {
+      "row_count": 186,
+      "columns": {
+        "transaction_id": {
+          "dtype": "str",
+          "null_count": 8,
+          "null_pct": 4.3,
+          "unique_count": 166,
+          "sample_values": [
+            "TXN10046",
+            "TXN10078",
+            "RET10009",
+            "RET10004",
+            "TXN10077"
+          ],
+          "quality_flags": []
+        },
+        "transaction_date": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 116,
+          "sample_values": [
+            "01/15/2024",
+            "2024-01-17",
+            "2024-03-03",
+            "2024-02-20",
+            "2024-01-05"
+          ],
+          "quality_flags": []
+        },
+        "store_id": {
+          "dtype": "str",
+          "null_count": 5,
+          "null_pct": 2.69,
+          "unique_count": 10,
+          "sample_values": [
+            "S09",
+            "S10",
+            "S07",
+            "S06",
+            "S08"
+          ],
+          "quality_flags": []
+        },
+        "product_id": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "P001",
+            "P014",
+            "P012",
+            "P016",
+            "P003"
+          ],
+          "quality_flags": []
+        },
+        "product_name": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "iPhone 15",
+            "TRX Resistance Bands",
+            "Nespresso Machine",
+            "CamelBak Water Bottle",
+            "AirPods Pro"
+          ],
+          "quality_flags": []
+        },
+        "category": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 21,
+          "sample_values": [
+            "Electronics",
+            "Sport",
+            "Home & Kitchen",
+            "Sports",
+            "Beauty"
+          ],
+          "quality_flags": []
+        },
+        "quantity": {
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 11,
+          "sample_values": [
+            "7",
+            "-1",
+            "-2",
+            "3",
+            "5"
+          ],
+          "min": -4.0,
+          "max": 8.0,
+          "mean": 3.9409,
+          "quality_flags": []
+        },
+        "unit_price": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 172,
+          "sample_values": [
+            "1034.37",
+            "55.79",
+            "192.03",
+            "193.82",
+            "30.63"
+          ],
+          "min": 0.01,
+          "max": 9999.99,
+          "mean": 356.2701,
+          "quality_flags": []
+        },
+        "total_amount": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 172,
+          "sample_values": [
+            "7240.59",
+            "390.53",
+            "-192.03",
+            "-387.64",
+            "91.89"
+          ],
+          "min": -1230.56,
+          "max": 9999.99,
+          "mean": 1215.2431,
+          "quality_flags": []
+        },
+        "customer_segment": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 16,
+          "sample_values": [
+            "Loyal",
+            "Premium",
+            "Prem",
+            "Bgt",
+            "Standard"
+          ],
+          "quality_flags": []
+        },
+        "payment_method": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 4,
+          "sample_values": [
+            "Apple Pay",
+            "PayPal",
+            "Debit Card",
+            "Credit Card"
+          ],
+          "quality_flags": []
+        }
+      }
+    },
+    "products": {
+      "row_count": 20,
+      "columns": {
+        "product_id": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "P001",
+            "P002",
+            "P003",
+            "P004",
+            "P005"
+          ],
+          "quality_flags": []
+        },
+        "product_name": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "iPhone 15",
+            "Samsung Galaxy S24",
+            "AirPods Pro",
+            "Sony WH-1000XM5",
+            "Levi's 501 Jeans"
+          ],
+          "quality_flags": []
+        },
+        "category": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 5,
+          "sample_values": [
+            "Electronics",
+            "Apparel",
+            "Home & Kitchen",
+            "Sports",
+            "Beauty"
+          ],
+          "quality_flags": []
+        },
+        "standard_price": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 19,
+          "sample_values": [
+            "999.99",
+            "849.99",
+            "249.99",
+            "349.99",
+            "69.99"
+          ],
+          "min": 12.99,
+          "max": 999.99,
+          "mean": 259.2405,
+          "quality_flags": []
+        }
+      }
+    },
+    "stores": {
+      "row_count": 10,
+      "columns": {
+        "store_id": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 10,
+          "sample_values": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05"
+          ],
+          "quality_flags": []
+        },
+        "store_name": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 10,
+          "sample_values": [
+            "Downtown Flagship",
+            "Westfield Mall",
+            "Harbor View",
+            "Peach Tree Center",
+            "Bayfront Store"
+          ],
+          "quality_flags": []
+        },
+        "region": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 4,
+          "sample_values": [
+            "Northeast",
+            "Southeast",
+            "Midwest",
+            "West"
+          ],
+          "quality_flags": []
+        },
+        "city": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 10,
+          "sample_values": [
+            "New York",
+            "Boston",
+            "Philadelphia",
+            "Atlanta",
+            "Miami"
+          ],
+          "quality_flags": []
+        },
+        "state": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 9,
+          "sample_values": [
+            "NY",
+            "MA",
+            "PA",
+            "GA",
+            "FL"
+          ],
+          "quality_flags": []
+        }
+      }
+    }
+  },
+  "candidate_join_keys": {
+    "store_id": [
+      "sales_data",
+      "stores"
+    ],
+    "product_id": [
+      "sales_data",
+      "products"
+    ]
+  },
+  "llm_analysis": {
+    "quality_summary": "The sales_data table contains 186 rows with generally good completeness (only store_id has 2.69% nulls). However, several data quality concerns are evident: mixed date formats in transaction_date, negative values in quantity and total_amount (indicating returns or data entry errors), inconsistent categorical values in customer_segment and payment_method, and occasional placeholder values like 'RET' in transaction_id. The products and stores tables are small and clean, with no nulls and consistent identifiers.",
+    "critical_issues": [
+      "Negative quantity values (e.g., -1, -2) suggesting returns are mixed with sales without a clear flag.",
+      "Negative total_amount values that do not align with positive sales amounts.",
+      "Inconsistent date formats in transaction_date (MM/DD/YYYY vs YYYY-MM-DD).",
+      "Store_id nulls (2.69%) which will break joins to the stores table.",
+      "Inconsistent categorical entries in customer_segment ('Prem', 'Bgt') and payment_method (missing some methods)."
+    ],
+    "transformation_recommendations": {
+      "sales_data.transaction_date": "Standardize all dates to ISO format (YYYY-MM-DD) using a parsing routine that handles both MM/DD/YYYY and YYYY-MM-DD patterns.",
+      "sales_data.quantity": "Create a new column 'transaction_type' (sale/return) based on the sign of quantity, then convert quantity to absolute value for analysis.",
+      "sales_data.total_amount": "Derive total_amount as quantity * unit_price after handling returns, or flag negative totals for review.",
+      "sales_data.store_id": "Impute missing store_id values using the most frequent store or by referencing other columns (e.g., city/state) if available; otherwise remove those rows.",
+      "sales_data.customer_segment": "Map inconsistent segment codes to a standard set (e.g., 'Prem' -> 'Premium', 'Bgt' -> 'Budget').",
+      "sales_data.payment_method": "Standardize payment_method values and create a lookup table for any missing or ambiguous entries."
+    },
+    "join_key_reasoning": "store_id and product_id are the only columns that appear in both sales_data and the dimension tables (stores, products). They are natural keys for enriching sales records with store attributes (region, city) and product attributes (category, standard_price). Ensuring these keys are complete and consistently formatted is essential for accurate joins."
+  }
+}

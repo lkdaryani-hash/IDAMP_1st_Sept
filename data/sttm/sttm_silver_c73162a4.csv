@@ -1,0 +1,30 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+public,sales_data,transaction_id,public,sales_data_silver,transaction_id,surrogate_key,transaction_id = uuid_generate_v4()
+public,sales_data,transaction_date,public,sales_data_silver,transaction_date,standardize_date,"transaction_date = to_date(transaction_date,  'MM/DD/YYYY')"
+public,sales_data,store_id,public,sales_data_silver,store_id,null_handler,drop_nulls
+public,sales_data,product_id,public,sales_data_silver,product_id,null_handler,drop_nulls
+public,sales_data,product_name,public,sales_data_silver,product_name,null_handler,fill_unknown
+public,sales_data,category,public,sales_data_silver,category,normalize_category,category = lower(trim(category))
+public,sales_data,quantity,public,sales_data_silver,quantity,null_handler,fill_median
+public,sales_data,unit_price,public,sales_data_silver,unit_price,null_handler,fill_median
+public,sales_data,total_amount,public,sales_data_silver,total_amount,null_handler,fill_median
+public,sales_data,customer_segment,public,sales_data_silver,customer_segment,normalize_segment,"customer_segment = case when lower(customer_segment) in ('loyal', 'regular', 'new') then lower(customer_segment) else 'unknown' end"
+public,sales_data,payment_method,public,sales_data_silver,payment_method,null_handler,fill_unknown
+public,sales_data,_load_timestamp,public,sales_data_silver,_load_timestamp,null_handler,drop_nulls
+public,sales_data,_source_file,public,sales_data_silver,_source_file,null_handler,drop_nulls
+public,products,product_id,public,products_silver,product_id,surrogate_key,product_id = uuid_generate_v4()
+public,products,product_name,public,products_silver,product_name,null_handler,fill_unknown
+public,products,category,public,products_silver,category,normalize_category,category = lower(trim(category))
+public,products,standard_price,public,products_silver,standard_price,null_handler,fill_median
+public,products,_load_timestamp,public,products_silver,_load_timestamp,null_handler,drop_nulls
+public,products,_source_file,public,products_silver,_source_file,null_handler,drop_nulls
+public,stores,store_id,public,stores_silver,store_id,surrogate_key,store_id = uuid_generate_v4()
+public,stores,store_name,public,stores_silver,store_name,null_handler,fill_unknown
+public,stores,region,public,stores_silver,region,null_handler,fill_unknown
+public,stores,city,public,stores_silver,city,null_handler,fill_unknown
+public,stores,state,public,stores_silver,state,null_handler,fill_unknown
+public,stores,_load_timestamp,public,stores_silver,_load_timestamp,null_handler,drop_nulls
+public,stores,_source_file,public,stores_silver,_source_file,null_handler,drop_nulls
+public,sales_data,*,public,sales_data_silver,*,dedup,remove duplicate rows based on transaction_id
+public,products,*,public,products_silver,*,dedup,remove duplicate rows based on product_id
+public,stores,*,public,stores_silver,*,dedup,remove duplicate rows based on store_id

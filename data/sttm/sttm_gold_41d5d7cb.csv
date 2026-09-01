@@ -1,0 +1,4 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+silver,sales_data,store_id,gold,avg_order_value_per_store,store_id,join,join_left:silver.sales_data:silver.stores:store_id
+silver,sales_data,store_id,gold,avg_order_value_per_store,store_id,group_by,store_id
+silver,sales_data,total_amount,gold,avg_order_value_per_store,avg_order_value,aggregate,AVG(total_amount) AS avg_order_value

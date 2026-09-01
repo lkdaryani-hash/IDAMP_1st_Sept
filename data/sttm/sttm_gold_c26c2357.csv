@@ -1,0 +1,5 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+silver,sales_data,product_id,silver,products,product_id,join,join_left:sales_data:products:product_id
+silver,sales_data,product_id,gold,product_return_rate,product_id,group_by,product_id
+silver,sales_data,product_name,gold,product_return_rate,product_name,group_by,product_name
+silver,sales_data,quantity,gold,product_return_rate,return_rate,aggregate,"SUM(CASE WHEN quantity < 0 THEN -quantity ELSE 0 END) / NULLIF(SUM(CASE WHEN quantity > 0 THEN quantity ELSE 0 END),0) AS return_rate"

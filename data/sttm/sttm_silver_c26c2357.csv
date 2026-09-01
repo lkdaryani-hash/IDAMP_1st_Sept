@@ -1,0 +1,14 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+source,sales_data,transaction_date,silver,sales_data,transaction_date,standardize_date,"TO_DATE(transaction_date, 'yyyy-MM-dd')"
+source,sales_data,store_id,silver,sales_data,store_id,null_handler,drop_nulls
+source,sales_data,product_id,silver,sales_data,product_id,null_handler,drop_nulls
+source,sales_data,product_name,silver,sales_data,product_name,null_handler,fill_unknown
+source,sales_data,category,silver,sales_data,category,normalize_category,LOWER(TRIM(category))
+source,sales_data,quantity,silver,sales_data,quantity,null_handler,fill_median
+source,sales_data,unit_price,silver,sales_data,unit_price,null_handler,fill_median
+source,sales_data,total_amount,silver,sales_data,total_amount,null_handler,fill_median
+source,sales_data,customer_segment,silver,sales_data,customer_segment,normalize_segment,INITCAP(customer_segment)
+source,sales_data,payment_method,silver,sales_data,payment_method,null_handler,fill_unknown
+source,sales_data,transaction_id,silver,sales_data,transaction_key,surrogate_key,GENERATE_UUID()
+source,products,product_id,silver,products,product_id,dedup,REMOVE_DUPLICATES(product_id)
+source,stores,store_id,silver,stores,store_id,dedup,REMOVE_DUPLICATES(store_id)

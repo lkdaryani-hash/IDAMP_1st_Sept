@@ -1,0 +1,6 @@
+source_schema,source_table,source_column,target_schema,target_table,target_column,transformation_type,transformation_logic
+public,sales_data_silver,product_id,public,top_5_products_last_4q,product_id,join,join_left:sales_data_silver:products_silver:product_id
+public,sales_data_silver,transaction_date,public,top_5_products_last_4q,transaction_date,time_filter,"transaction_date >= dateadd('quarter',  -3,  date_trunc('quarter',  (select max(transaction_date) from sales_data_silver)))"
+public,products_silver,product_id,public,top_5_products_last_4q,product_id,group_by,product_id
+public,sales_data_silver,total_amount,public,top_5_products_last_4q,total_revenue,aggregate,SUM(total_amount) AS total_revenue
+public,top_5_products_last_4q,total_revenue,public,top_5_products_last_4q,rank,rank_limit,ORDER BY total_revenue DESC LIMIT 5
